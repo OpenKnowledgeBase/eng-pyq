@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Website - Squid Game Theme</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Rubik+Mono+One&display=swap"
+        rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Rubik Mono One', sans-serif;
+            background-color: #ff4757;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2f3542;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-family: 'Bungee', cursive;
+            font-size: 2.5em;
+            margin: 0;
+            color: #ff6b81;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+            color: #a4b0be;
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b81;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #ff6b81;
+        }
+
+        section h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ff6b81;
+        }
+
+        section p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #a4b0be;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+            color: #a4b0be;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #a4b0be;
+            animation: fadeIn 3s ease-in;
+        }
+
+        footer span {
+            color: #ff6b81;
+        }
+
+        /* Interactive Elements */
+        .question {
+            cursor: pointer;
+            background-color: #57606f;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .question:hover {
+            background-color: #747d8c;
+        }
+
+        .answer {
+            display: none;
+            padding: 15px;
+            background-color: #2f3542;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #a4b0be;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section h3 {
+                font-size: 1.2em;
+            }
+
+            .question {
+                padding: 10px;
+            }
+
+            .answer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Study Website</h1>
+            <p>i hope this will be helpful for you guys 🥰 and enjoy the new  <span
+                    style="color: #ff6b81;">Squid Game</span> season 2 on netflix watch it after your exam  its super   </p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#answers">PYQ Answers</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="home" class="visible">
+                <h2>Welcome to the Study Website</h2>
+                <p>This website is designed to help you prepare for your exams and inspiration is from <span style="color: #ff6b81;">Squid
+                        Game</span>  click on the "PYQ Answers" link for answers and yaa !</p>
+            </section>
+
+            <section id="answers">
+                <h2>BEGLA-136: English at the Workplace</h2>
+
+                <!-- Question 1 -->
+                <div class="question" onclick="toggleAnswer('q1')">
+                    <h3>Question 1: Match the words in Column A with their meanings in Column B</h3>
+                </div>
+                <div class="answer" id="q1">
+                    <p><strong>Answers:</strong></p>
+                    <ul>
+                        <li>(a) Results that are easy to see - (vi) Tangible</li>
+                        <li>(b) Evidence that shows people your abilities - (v) Credentials</li>
+                        <li>(c) Ornamental objects of no great value - (iii) Frills</li>
+                        <li>(d) Arranged in order of time of occurrence - (iv) Chronological</li>
+                        <li>(e) An object produced or shaped by human craft - (ii) Artifact</li>
+                        <li>(f) An official award or a recommendation - (i) Commendation</li>
+                        <li>(g) Expressing much in few words - (viii) Concise</li>
+                        <li>(h) Coming before - (vii) Prior</li>
+                        <li>(i) People in charge of hiring new employees - (ix) Recruiters</li>
+                        <li>(j) Starting something - (x) Initializing</li>
+                    </ul>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question" onclick="toggleAnswer('q2')">
+                    <h3>Question 2: Make sentences using the following words</h3>
+                </div>
+                <div class="answer" id="q2">
+                    <p><strong>Answers:</strong></p>
+                    <ul>
+                        <li>(a) Innovative: The company introduced an innovative approach to reduce waste.</li>
+                        <li>(b) Creativity: Her creativity in designing the new logo was impressive.</li>
+                        <li>(c) Ambition: His ambition to become a CEO drove him to work harder.</li>
+                        <li>(d) Teamwork: Teamwork is essential for the success of any project.</li>
+                        <li>(e) Dedication: Her dedication to her studies earned her top grades.</li>
+                    </ul>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question" onclick="toggleAnswer('q3')">
+                    <h3>Question 3: Rewrite the sentences in passive voice and fill in the blanks</h3>
+                </div>
+                <div class="answer" id="q3">
+                    <p><strong>Answers:</strong></p>
+                    <ul>
+                        <li>(i) The course is being taught by the teacher.</li>
+                        <li>(ii) The painting is drawn by Ram.</li>
+                        <li>(iii) Sweets are liked by everyone.</li>
+                        <li>(iv) A new house is being bought by Shyam.</li>
+                        <li>(v) Has your assignment been completed by you?</li>
+                    </ul>
+                    <p><strong>Fill in the blanks:</strong></p>
+                    <ul>
+                        <li>(i) Think carefully before joining your new assignment.</li>
+                        <li>(ii) Responding to job advertisements is a skill that freshers must learn.</li>
+                        <li>(iii) Please remove the broken chairs from the hall.</li>
+                        <li>(iv) She reached the meeting point well before the appointed time.</li>
+                        <li>(v) What would happen if we did not accept their invitation?</li>
+                        <li>(vi) What would happen if we missed the deadline?</li>
+                        <li>(vii) If somebody walked in here with a gun, I’d be very frightened.</li>
+                        <li>(viii) I’m sure Satish would understand if you explained the situation to him.</li>
+                        <li>(ix) We should go through the contract carefully before signing it.</li>
+                        <li>(x) The opponents sat opposite to each other.</li>
+                    </ul>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question" onclick="toggleAnswer('q4')">
+                    <h3>Question 4: Write short notes</h3>
+                </div>
+                <div class="answer" id="q4">
+                    <p><strong>Answers:</strong></p>
+                    <ul>
+                        <li>(a) Essentials of good customer service:
+                            <ul>
+                                <li>Good customer service involves being polite, responsive, and empathetic to customer
+                                    needs.</li>
+                                <li>It requires active listening, timely resolution of issues, and maintaining a
+                                    positive attitude.</li>
+                                <li>Providing accurate information and going the extra mile to satisfy customers are
+                                    also key.</li>
+                            </ul>
+                        </li>
+                        <li>(b) Workplace Etiquette:
+                            <ul>
+                                <li>Workplace etiquette includes being punctual, dressing appropriately, and respecting
+                                    colleagues.</li>
+                                <li>It involves effective communication, maintaining professionalism, and avoiding
+                                    gossip.</li>
+                                <li>Good etiquette also means being mindful of shared spaces and adhering to company
+                                    policies.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question" onclick="toggleAnswer('q5')">
+                    <h3>Question 5: Prepare a brief CV</h3>
+                </div>
+                <div class="answer" id="q5">
+                    <p><strong>Sample CV:</strong></p>
+                    <pre>
+Name: John Doe
+Contact: johndoe@example.com | +1234567890
+
+Educational Qualifications:
+- B.A. in English, XYZ University, 2020
+- High School Diploma, ABC School, 2017
+
+Professional Experience:
+- Content Writer, XYZ Corp, 2021-Present
+- Intern, ABC Media, 2020-2021
+
+Skills:
+- Excellent communication skills
+- Proficient in Microsoft Office
+- Creative writing and editing
+
+References:
+Available upon request.
+                    </pre>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question" onclick="toggleAnswer('q6')">
+                    <h3>Question 6: Job application letter</h3>
+                </div>
+                <div class="answer" id="q6">
+                    <p><strong>Sample Letter:</strong></p>
+                    <pre>
+[Your Name]
+[Your Address]
+[City, State, ZIP Code]
+[Email Address]
+[Phone Number]
+[Date]
+
+[Recipient's Name]
+[Company Name]
+[Company Address]
+[City, State, ZIP Code]
+
+Dear [Recipient's Name],
+
+I am writing to apply for the position of Secretary at [Company Name], as advertised on [Job Portal/Company Website]. With a strong background in administrative support and a proven track record of enhancing organizational efficiency, I am confident in my ability to contribute effectively to your team.
+
+In my previous role at [Previous Company], I successfully increased team productivity by 30% within six months. I am skilled in office management, communication, and strategic planning, and I am excited about the opportunity to bring my expertise to [Company Name].
+
+I have attached my resume for your review. I would welcome the opportunity to discuss how my skills and experiences align with the needs of your team. Thank you for considering my application.
+
+Sincerely,
+[Your Name]
+                    </pre>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question" onclick="toggleAnswer('q7')">
+                    <h3>Question 7: Interview questions and answers</h3>
+                </div>
+                <div class="answer" id="q7">
+                    <p><strong>Sample Questions and Answers:</strong></p>
+                    <ul>
+                        <li>Q1: Tell me about yourself.
+                            <ul>
+                                <li>A1: I am a highly motivated individual with a passion for customer service. I have
+                                    experience working as a receptionist in a busy office environment, where I developed
+                                    strong organizational and communication skills.</li>
+                            </ul>
+                        </li>
+                        <li>Q2: Why do you want to work here?
+                            <ul>
+                                <li>A2: I admire the reputation of your institute and the quality of training provided.
+                                    I am eager to contribute to the success of your team and grow professionally in this
+                                    role.</li>
+                            </ul>
+                        </li>
+                        <li>Q3: How do you handle difficult customers?
+                            <ul>
+                                <li>A3: I remain calm and listen carefully to their concerns. I then work to find a
+                                    solution that satisfies the customer while adhering to company policies.</li>
+                            </ul>
+                        </li>
+                        <li>Q4: What are your strengths?
+                            <ul>
+                                <li>A4: My strengths include excellent communication skills, attention to detail, and
+                                    the ability to multitask effectively.</li>
+                            </ul>
+                        </li>
+                        <li>Q5: What are your weaknesses?
+                            <ul>
+                                <li>A5: I tend to be a perfectionist, which can sometimes slow me down. However, I am
+                                    working on balancing perfection with efficiency.</li>
+                            </ul>
+                        </li>
+                        <li>Q6: How do you prioritize your work?
+                            <ul>
+                                <li>A6: I prioritize tasks based on urgency and importance. I also use tools like to-do
+                                    lists and calendars to stay organized.</li>
+                            </ul>
+                        </li>
+                        <li>Q7: Can you describe a time when you went above and beyond for a customer?
+                            <ul>
+                                <li>A7: In my previous role, a customer was upset about a delayed order. I personally
+                                    ensured the order was expedited and followed up with the customer to ensure their
+                                    satisfaction.</li>
+                            </ul>
+                        </li>
+                        <li>Q8: How do you handle stress?
+                            <ul>
+                                <li>A8: I handle stress by staying organized and taking short breaks when needed. I also
+                                    practice mindfulness to stay focused.</li>
+                            </ul>
+                        </li>
+                        <li>Q9: Why should we hire you?
+                            <ul>
+                                <li>A9: You should hire me because I bring a combination of relevant experience, strong
+                                    interpersonal skills, and a commitment to providing excellent service.</li>
+                            </ul>
+                        </li>
+                        <li>Q10: Do you have any questions for us?
+                            <ul>
+                                <li>A10: Yes, I would like to know more about the team I would be working with and the
+                                    opportunities for professional development within the company.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question" onclick="toggleAnswer('q8')">
+                    <h3>Question 8: Outline of a presentation</h3>
+                </div>
+                <div class="answer" id="q8">
+                    <p><strong>Outline:</strong></p>
+                    <pre>
+1. Introduction
+   - Brief overview of the town/city/village
+   - Historical significance
+
+2. Geography and Climate
+   - Location
+   - Climate and weather patterns
+
+3. Culture and Traditions
+   - Local festivals
+   - Traditional cuisine
+
+4. Economy and Infrastructure
+   - Major industries
+   - Transportation and facilities
+
+5. Conclusion
+   - Summary of key points
+   - Why the town/city/village is unique
+                    </pre>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Made with ❤️ by <span>Robiii</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for toggling answers
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.classList.toggle('show');
+        }
+
+        // JavaScript for scrolling effects
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
